@@ -1,0 +1,97 @@
+
+function possiblePathsRook(row,col,piece){
+    let arr=new Array();
+    let pieceColor=findColor(piece);
+    
+        for (let i = row-1; i >= 1; i--) {
+            
+            let temp = document.querySelector(`.r-${i}.c-${col}`);
+            
+            let child=temp.firstElementChild;
+           
+           if(temp.hasChildNodes()){
+            if(child.classList.contains("blackPiece")&&pieceColor=="black"
+            ||child.classList.contains("whitePiece")&&pieceColor=="white"){
+                break;
+            }
+            else if(child.classList.contains("whitePiece")&&pieceColor=="black"||
+            child.classList.contains("blackPiece")&&pieceColor=="white"){
+                arr.push(temp);
+                break;
+            }
+           }
+            else{
+                arr.push(temp);
+            }
+             
+        }
+
+        for (let j = col-1; j >= 1; j--) {
+            
+            let temp = document.querySelector(`.r-${row}.c-${j}`);
+            
+            let child=temp.firstElementChild;
+            if(temp.hasChildNodes()){
+                if(child.classList.contains("blackPiece")&&pieceColor=="black"
+                ||child.classList.contains("whitePiece")&&pieceColor=="white"){
+                    break;
+                }
+                else if(child.classList.contains("whitePiece")&&pieceColor=="black"||
+                child.classList.contains("blackPiece")&&pieceColor=="white"){
+                    arr.push(temp);
+                    break;
+                }
+               }
+                else{
+                    arr.push(temp);
+                }
+             
+        }
+        for (let j = col+1; j <=8; j++) {
+            
+            let temp = document.querySelector(`.r-${row}.c-${j}`);
+            
+            let child=temp.firstElementChild;
+            if(temp.hasChildNodes()){
+                if(child.classList.contains("blackPiece")&&pieceColor=="black"
+                ||child.classList.contains("whitePiece")&&pieceColor=="white"){
+                    break;
+                }
+                else if(child.classList.contains("whitePiece")&&pieceColor=="black"||
+                child.classList.contains("blackPiece")&&pieceColor=="white"){
+                    arr.push(temp);
+                    break;
+                }
+               }
+                else{
+                    arr.push(temp);
+                }
+             
+        }
+        for (let i = row+1; i <=8; i++) {
+            
+            let temp = document.querySelector(`.r-${i}.c-${col}`);
+            
+            let child=temp.firstElementChild;
+            if(temp.hasChildNodes()){
+                if(child.classList.contains("blackPiece")&&pieceColor=="black"
+                ||child.classList.contains("whitePiece")&&pieceColor=="white"){
+                    break;
+                }
+                else if(child.classList.contains("whitePiece")&&pieceColor=="black"||
+                child.classList.contains("blackPiece")&&pieceColor=="white"){
+                    arr.push(temp);
+                    break;
+                }
+               }
+                else{
+                    arr.push(temp);
+                }
+             
+        }
+
+        
+        setHighLight(arr);
+        return arr;
+  
+}
