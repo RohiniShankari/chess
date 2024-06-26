@@ -1,4 +1,4 @@
-//pawns
+//pawns possible moves
 function possiblePathsPawn(row,col,piece){
     if(piece.classList.contains('pawn')){
         let arr=new Array();

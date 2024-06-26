@@ -1,4 +1,4 @@
-//bishop
+//bishop possible moves
 function possiblePathsBishop(row,col,piece){
     let arr=new Array();
     let pieceColor=findColor(piece);

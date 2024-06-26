@@ -1,4 +1,4 @@
-
+//rook possible moves
 function possiblePathsRook(row,col,piece){
     let arr=new Array();
     let pieceColor=findColor(piece);

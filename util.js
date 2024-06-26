@@ -1,5 +1,5 @@
 
-
+//all the helper functions
 function createPiece(pieceClass,i) {
     const piece = document.createElement('div');
     piece.innerHTML = `<i class="fa-solid ${pieceClass}"></i>`;

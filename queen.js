@@ -1,4 +1,4 @@
-//queens
+//queens possible moves
 function possiblePathsQueen(row,col,piece){
     let arr=new Array();
     let pieceColor=findColor(piece);

@@ -1,4 +1,4 @@
-//knight
+//knight possible moves
 
 function possiblePathsknight(row,col,piece){
     let arr=new Array();
